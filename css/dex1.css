@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+   color: white;
+}
+
+ .navbar{
+    background:#000000;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+ }
+
+ .navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 0 50px;
+ }
+  #navbar__logo{
+    background-color:#f8f8ff;
+    background-image: linear-gradient(to top, #ffffff 0%, #ffffff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+
+  .sub{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 100px;
+  }
+   .brnd-bell{
+    margin-right: 0.5rem;
+   }
+
+   .navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;  
+   }
+
+   .navbar__item{
+    height: 80px;
+   }
+
+   .navbar__links{
+    color: #f8f8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+   }
+
+   .navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+   }
+
+   .buttons {
+    display: flex; /* Arrange buttons horizontally by default */
+    gap: 15px; /* Add some space between the buttons */
+  }
+  
+  .order-buttons,
+  .contact-button {
+    display: inline-block; /* Allows setting width and height, but behaves like inline for flow */
+    padding: 10px 20px; /* Add padding inside the buttons */
+    text-decoration: none; /* Remove default link underline */
+    color: #fff; /* White text color */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 1em; /* Set a reasonable font size */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .order-buttons {
+    background-color: #b8725c; /* Green color for "Order Now" */
+  }
+  
+  .order-buttons:hover {
+    background-color: #60ad60; /* Darker green on hover */
+  }
+  
+  .contact-button {
+    background-color: #466d46; /* Blue color for "Contact" */
+  }
+  
+  .contact-button:hover {
+    background-color: #90a2b6; /* Darker blue on hover */
+  }
+  
+  /* --- Optional adjustments for smaller screens (matching previous JS) --- */
+  @media (max-width: 768px) {
+    .buttons {
+      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      align-items: center; /* Center the buttons */
+      gap: 10px; /* Adjust spacing for stacked buttons */
+    }
+  
+    .order-buttons,
+    .contact-button {
+      width: 80%; /* Make buttons wider on smaller screens */
+      text-align: center; /* Center text within the button */
+    }
+  }
+
+   .button:hover{
+    background: #4169e1;
+    transition: all 0.3s ease;
+   }
+
+   .navbar__links:hover{
+    color: #a3c1ad ;
+    transition: all 0.3s ease;
+   }
+
+   .home-section {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    background-position: center;
+    max-width: 100%;
+    cursor: pointer;
+   }
+
+   .home-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+   }
+
+   .navbar__links {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: italic;
+   }
+
+   .menu-section {
+    color: rgb(255, 255, 255);
+    background-color: #EFEEEA;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    background-position: center;
+    max-width: 100%;
+    padding: 50px 0 100px;
+  }
+  
+  .menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu-section .menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+  }
+  
+  .menu-section .menu-list .menu-item .menu-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  .menu-section .menu-list .menu-item .section-title{
+    color: #333f16;
+  }
+  
+  .menu-section .menu-list .menu-item .name {
+    margin: 12px 0;
+    font-size: large;
+    font-weight: 600px;
+    font-family: "Arvo";
+    font-weight: bold;
+  }
+  
+  .menu-section .menu-list .menu-item .text {
+    font-size: medium;
+    color: #333f16;
+    font-family: "Oswald";
+    font-size: 25px;
+  }
+
+  .name {
+    color: #000;
+  }
+
+
+  .home-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    justify-content: space-between;
+  }
+
+  .home-section .home-info .title {
+    font-size: 2.3rem;
+    color: rgb(255, 255, 255);
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    width: 250px;
+    height: 200px;
+    font-style: normal;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .home-section .home-info .sub {
+    font-size: 30px;
+    margin-top: 8px;
+    max-width: 70%;
+    font-weight: 600;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  .home-section .home-info .description {
+    font-size: 20px;
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  }
+  
+  .home-section .home-info .buttons {
+    display: flex;
+    gap: 23px;
+  }
+  
+  .home-section .home-info .button {
+    padding: 10px 26px;
+    color: rgb(243, 189, 163);
+    border-radius: 30px;
+    background: rgb(138, 122, 122);
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+   @media screen and (max-width: 960px){
+     .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+     }
+
+     .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top:-1000px;
+        opacity: 0;
+        transition: all 0.5 ease;
+        height: 50vh;
+        z-index: -1;
+        background:#000;
+     }
+
+     .navbar__menu.active{
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+     }
+
+     #navbar__logo{
+        padding-left: 25px;
+     }
+    
+     .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+     }
+      .navbar__item{
+        width: 100%;
+      }
+      .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+      }
+
+      #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+      }
+
+      .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+      }
+
+      #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+      }
+      #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+      }
+   }
+   #about {
+    background-color: #EFEEEA;
+    max-width: 100%;
+    padding: 50px 20px;
+}
+
+.about-section .section-title {
+    text-align: center;
+    font-size: 50px;
+    color: #333f16;
+    margin-bottom: 20px;
+}
+
+
+.section-content {
+    align-items: center;
+    text-align: center;
+}
+
+.about-image-wrapper img {
+  max-width: 100%;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  box-shadow: #777;
+  margin-bottom: 20px;
+  float: none;
+  flex-direction: left;
+}
+
+.about-details .text-about {
+  font-size: 25px;
+  font-family: 'Oswald';
+  font-weight: bold;
+  color: #333f16;
+  margin-bottom: 20px;
+  max-width: 800px;
+  text-align: left;
+  flex: 1;
+}
+
+.socmed-link-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socmed-link {
+    color: blue;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.reviews-section {
+    background-color: #EFEEEA;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.reviews-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.reviews-section .section-title{
+  color: #333f16;
+}
+
+.review {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.review-text {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.review-author {
+    font-style: italic;
+    color: #777;
+}
+
+.review-section .user-image {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.user-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.contact {
+    background-color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info-list {
+    list-style: none;
+    padding: 0%;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.contact-section {
+    background-color: #EFEEEA;
+    height: 450px;
+}
+
+.contact-section .section-title{
+  color: #333f16;
+}
+
+.contact-info {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #444;
+}
+
+.contact-info i {
+    margin-right: 12px;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.mop-section {
+    text-align: center;
+    height: 650px;
+    background-color:#EFEEEA;
+}
+
+.mop-section .section-title{
+  font-size: 50px;
+  color: #333f16;
+  justify-content: center;
+  text-align: center;
+} 
+
+.mop-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0%;
+    margin-top: 20px;
+}
+
+.mop-item {
+    margin: 0 15px;
+}
+
+.mop-image {
+  height: 250px;
+  margin-top: 0px;
+  border: 2px solid #b8a9c9; /* Dusty Lavender */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.wonderpets{
+    font-size: 20px;
+    margin-top: 80px;
+    margin-bottom: 0;
+    border: 2px solid #333; /* Add a 2-pixel solid black border */
+}
